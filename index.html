@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -53,7 +52,7 @@
     nav a {
       color: #aaa;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 18px;
       font-size: 14px;
     }
 
@@ -145,7 +144,8 @@
       margin-bottom: 45px;
     }
 
-    .services {
+    .services,
+    .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
@@ -169,14 +169,9 @@
       margin-bottom: 12px;
     }
 
-    .card p {
+    .card p,
+    .project p {
       color: #999;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
     }
 
     .project {
@@ -202,10 +197,6 @@
       margin: 12px 0;
     }
 
-    .project p {
-      color: #999;
-    }
-
     .about {
       text-align: center;
       max-width: 750px;
@@ -216,327 +207,13 @@
       font-size: 17px;
     }
 
-    .contact {
-      text-align: center;
+    /* AI DEMO */
+
+    .ai-demo {
+      max-width: 750px;
+      margin: auto;
       background: #0b0b0b;
       border: 1px solid #222;
       border-radius: 20px;
-      padding: 60px 25px;
-    }
-
-    .contact-form {
-      max-width: 650px;
-      margin: 35px auto 0;
-      text-align: left;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      color: #ccc;
-      font-size: 14px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 14px;
-      background: #050505;
-      color: white;
-      border: 1px solid #333;
-      border-radius: 8px;
-      outline: none;
-      font-family: Arial, sans-serif;
-      font-size: 15px;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: #00ff88;
-    }
-
-    .form-group textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    .contact-form button {
-      width: 100%;
-      margin: 5px 0 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid #222;
-      color: #666;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      nav a {
-        margin: 0 7px;
-      }
-
-      .hero {
-        min-height: 80vh;
-      }
-
-      .section-title {
-        font-size: 32px;
-      }
-    }
-  </style>
-
-</head>
-
-<body>
-
-  <header>
-    <nav>
-      <div class="logo">TOFFY<span>LABS</span></div>
-
-```
-  <div>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#tech">Tech</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-```
-
-  </header>
-
-  <section class="hero">
-    <div>
-      <h1>Build.<br><span>Automate.</span><br>Scale.</h1>
-
-```
-  <p>
-    AI, automation and software solutions designed to help
-    businesses work smarter, faster and better.
-  </p>
-
-  <div class="buttons">
-    <a href="#contact" class="btn primary">Let's Work Together</a>
-    <a href="#services" class="btn secondary">Explore Services</a>
-  </div>
-</div>
-```
-
-  </section>
-
-  <section id="services">
-    <h2 class="section-title">What We Build</h2>
-    <p class="section-subtitle">
-      Practical technology built around real business problems.
-    </p>
-
-```
-<div class="services">
-
-  <div class="card">
-    <h3>🤖 AI Solutions</h3>
-    <p>
-      AI assistants, chatbots and intelligent tools that help
-      businesses save time and serve customers better.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>⚙️ Automation</h3>
-    <p>
-      Python scripts and automated workflows that remove
-      repetitive tasks from your daily operations.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>💻 Software</h3>
-    <p>
-      Custom websites, tools and software solutions designed
-      around your specific needs.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>📈 Business Tech</h3>
-    <p>
-      Technology solutions that help businesses improve
-      productivity, organization and growth.
-    </p>
-  </div>
-
-</div>
-```
-
-  </section>
-
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <p class="section-subtitle">
-      Things we're building at ToffyLabs.
-    </p>
-
-```
-<div class="projects">
-
-  <div class="project">
-    <span>AI</span>
-    <h3>AI Customer Assistant</h3>
-    <p>
-      An intelligent assistant designed to answer customer
-      questions automatically.
-    </p>
-  </div>
-
-  <div class="project">
-    <span>AUTOMATION</span>
-    <h3>Business Automation Tool</h3>
-    <p>
-      A Python-based system for reducing repetitive business tasks.
-    </p>
-  </div>
-
-  <div class="project">
-    <span>SOFTWARE</span>
-    <h3>Custom Business Website</h3>
-    <p>
-      Modern responsive websites designed for businesses and brands.
-    </p>
-  </div>
-
-</div>
-```
-
-  </section>
-
-  <section id="tech">
-    <h2 class="section-title">Our Tech Stack</h2>
-    <p class="section-subtitle">
-      Tools and technologies we use to build modern solutions.
-    </p>
-
-```
-<div class="services">
-
-  <div class="card">
-    <h3>🐍 Python</h3>
-    <p>
-      Automation, AI tools, scripts and powerful backend solutions.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>🤖 AI</h3>
-    <p>
-      Intelligent assistants, chatbots and AI-powered business tools.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>🌐 Web</h3>
-    <p>
-      Modern, responsive websites built for businesses and brands.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>⚡ Automation</h3>
-    <p>
-      Smart workflows that reduce repetitive work and save time.
-    </p>
-  </div>
-
-</div>
-```
-
-  </section>
-
-  <section id="about">
-    <div class="about">
-      <h2 class="section-title">About ToffyLabs</h2>
-
-```
-  <p>
-    ToffyLabs is a technology brand focused on AI, automation
-    and software solutions. We build useful digital tools that
-    help businesses solve problems, save time and scale.
-  </p>
-</div>
-```
-
-  </section>
-
-  <section id="contact">
-    <div class="contact">
-
-```
-  <h2 class="section-title">Have a Project?</h2>
-
-  <p class="section-subtitle">
-    Tell us what you want to build and let's turn your idea into something real.
-  </p>
-
-  <form class="contact-form"
-    action="mailto:hello@toffylabs.com"
-    method="post"
-    enctype="text/plain">
-
-    <div class="form-group">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="Name" placeholder="Enter your name" required>
-    </div>
-
-    <div class="form-group">
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="Email" placeholder="Enter your email" required>
-    </div>
-
-    <div class="form-group">
-      <label for="service">What do you need?</label>
-      <select id="service" name="Service" required>
-        <option value="">Select a service</option>
-        <option value="AI Solutions">AI Solutions</option>
-        <option value="Automation">Automation</option>
-        <option value="Software">Software</option>
-        <option value="Business Tech">Business Tech</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Project Details</label>
-      <textarea id="message" name="Message" placeholder="Tell us about your project..." required></textarea>
-    </div>
-
-    <button type="submit" class="btn primary">
-      Send Project Request
-    </button>
-
-  </form>
-
-</div>
-```
-
-  </section>
-
-  <footer>
-    © 2026 ToffyLabs — Build. Automate. Scale.
-  </footer>
-
-</body>
-</html>
+      overflow: hidden;
+      box-shadow: 0 0 40
