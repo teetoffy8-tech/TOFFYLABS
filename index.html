@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>ToffyLabs | Build. Automate. Scale.</title>
 
   <style>
@@ -10,111 +11,229 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background: #0a0a0a;
+      background: #050505;
       color: white;
-      text-align: center;
+      line-height: 1.6;
     }
 
     header {
-      padding: 25px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.92);
+      border-bottom: 1px solid #222;
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #222;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: bold;
+      letter-spacing: 2px;
     }
 
     .logo span {
-      color: #00ff99;
+      color: #00ff88;
     }
 
     nav a {
       color: #aaa;
       text-decoration: none;
       margin-left: 20px;
+      font-size: 14px;
     }
 
     nav a:hover {
-      color: #00ff99;
+      color: #00ff88;
     }
 
     .hero {
-      padding: 120px 20px;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        radial-gradient(circle at top, #123b2b 0%, #050505 45%);
     }
 
     .hero h1 {
-      font-size: 55px;
-      margin-bottom: 20px;
+      font-size: clamp(45px, 8vw, 90px);
+      line-height: 1;
+      margin-bottom: 25px;
     }
 
     .hero h1 span {
-      color: #00ff99;
+      color: #00ff88;
     }
 
     .hero p {
+      max-width: 650px;
+      margin: auto;
       color: #aaa;
       font-size: 18px;
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
     }
 
-    .button {
+    .buttons {
+      margin-top: 35px;
+    }
+
+    .btn {
       display: inline-block;
-      margin-top: 30px;
       padding: 14px 25px;
-      background: #00ff99;
-      color: #000;
-      text-decoration: none;
+      margin: 7px;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: #00ff88;
+      color: #000;
+    }
+
+    .primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+    }
+
+    .secondary {
+      border: 1px solid #444;
+      color: white;
+    }
+
+    .secondary:hover {
+      border-color: #00ff88;
+      color: #00ff88;
     }
 
     section {
-      padding: 70px 8%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 25px;
     }
 
-    h2 {
-      font-size: 35px;
-      margin-bottom: 40px;
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #888;
+      margin-bottom: 45px;
     }
 
     .services {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
 
     .card {
-      background: #111;
+      background: #0d0d0d;
       border: 1px solid #222;
+      border-radius: 15px;
       padding: 30px;
-      width: 250px;
-      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #00ff88;
     }
 
     .card h3 {
-      margin-bottom: 15px;
+      color: #00ff88;
+      margin-bottom: 12px;
     }
 
     .card p {
       color: #999;
-      line-height: 1.5;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: linear-gradient(145deg, #111, #080808);
+      border: 1px solid #222;
+      border-radius: 15px;
+      padding: 28px;
+    }
+
+    .project span {
+      color: #00ff88;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .project h3 {
+      margin: 12px 0;
+    }
+
+    .project p {
+      color: #999;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 750px;
+    }
+
+    .about p {
+      color: #aaa;
+      font-size: 17px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #0b0b0b;
+      border: 1px solid #222;
+      border-radius: 20px;
+      padding: 60px 25px;
     }
 
     footer {
+      text-align: center;
       padding: 30px;
       border-top: 1px solid #222;
-      color: #777;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
     }
   </style>
 </head>
@@ -122,76 +241,141 @@
 <body>
 
   <header>
-    <div class="logo">TOFFY<span>LABS</span></div>
-
     <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <div class="logo">TOFFY<span>LABS</span></div>
+
+      <div>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Build. <span>Automate.</span> Scale.</h1>
+    <div>
+      <h1>Build.<br><span>Automate.</span><br>Scale.</h1>
 
-    <p>
-      We build smart digital solutions using AI, automation,
-      and software to help businesses save time and grow.
-    </p>
+      <p>
+        AI, automation and software solutions designed to help
+        businesses work smarter, faster and better.
+      </p>
 
-    <a href="#services" class="button">Explore Services</a>
+      <div class="buttons">
+        <a href="#contact" class="btn primary">Let's Work Together</a>
+        <a href="#services" class="btn secondary">Explore Services</a>
+      </div>
+    </div>
   </section>
 
   <section id="services">
-    <h2>What We Do</h2>
+    <h2 class="section-title">What We Build</h2>
+    <p class="section-subtitle">
+      Practical technology built around real business problems.
+    </p>
 
     <div class="services">
 
       <div class="card">
         <h3>🤖 AI Solutions</h3>
-        <p>Smart AI tools and assistants designed for real-world business needs.</p>
+        <p>
+          AI assistants, chatbots and intelligent tools that help
+          businesses save time and serve customers better.
+        </p>
       </div>
 
       <div class="card">
         <h3>⚙️ Automation</h3>
-        <p>Automate repetitive tasks and make your workflow faster.</p>
+        <p>
+          Python scripts and automated workflows that remove
+          repetitive tasks from your daily operations.
+        </p>
       </div>
 
       <div class="card">
-        <h3>🌐 Web Development</h3>
-        <p>Modern websites and digital experiences for businesses and creators.</p>
+        <h3>💻 Software</h3>
+        <p>
+          Custom websites, tools and software solutions designed
+          around your specific needs.
+        </p>
       </div>
 
       <div class="card">
-        <h3>📱 Business Solutions</h3>
-        <p>Custom technology solutions built around your business.</p>
+        <h3>📈 Business Tech</h3>
+        <p>
+          Technology solutions that help businesses improve
+          productivity, organization and growth.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">
+      Things we're building at ToffyLabs.
+    </p>
+
+    <div class="projects">
+
+      <div class="project">
+        <span>AI</span>
+        <h3>AI Customer Assistant</h3>
+        <p>
+          An intelligent assistant designed to answer customer
+          questions automatically.
+        </p>
+      </div>
+
+      <div class="project">
+        <span>AUTOMATION</span>
+        <h3>Business Automation Tool</h3>
+        <p>
+          A Python-based system for reducing repetitive business tasks.
+        </p>
+      </div>
+
+      <div class="project">
+        <span>SOFTWARE</span>
+        <h3>Custom Business Website</h3>
+        <p>
+          Modern responsive websites designed for businesses and brands.
+        </p>
       </div>
 
     </div>
   </section>
 
   <section id="about">
-    <h2>About ToffyLabs</h2>
+    <div class="about">
+      <h2 class="section-title">About ToffyLabs</h2>
 
-    <p style="color:#aaa; max-width:650px; margin:auto; line-height:1.7;">
-      ToffyLabs is a technology brand focused on AI, automation,
-      and software solutions. Our goal is simple:
-      build useful technology that makes work easier.
-    </p>
+      <p>
+        ToffyLabs is a technology brand focused on AI, automation
+        and software solutions. We build useful digital tools that
+        help businesses solve problems, save time and scale.
+      </p>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Let's Build Something</h2>
+    <div class="contact">
+      <h2 class="section-title">Have a Project?</h2>
 
-    <p style="color:#aaa;">
-      Have a project or idea? Let's turn it into reality.
-    </p>
+      <p class="section-subtitle">
+        Let's turn your idea into something real.
+      </p>
 
-    <a class="button" href="mailto:hello@toffylabs.com">Contact ToffyLabs</a>
+      <a href="mailto:hello@toffylabs.com" class="btn primary">
+        Contact ToffyLabs
+      </a>
+    </div>
   </section>
 
   <footer>
-    © 2026 ToffyLabs. Build. Automate. Scale.
+    © 2026 ToffyLabs — Build. Automate. Scale.
   </footer>
 
 </body>
