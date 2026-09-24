@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Services | ToffyLabs</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #050505;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 1px solid #222;
+      background: #050505;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #00ff88;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #00ff88;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 25px 60px;
+      background: radial-gradient(circle at top, #123b2b, #050505 55%);
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 75px);
+    }
+
+    .hero h1 span {
+      color: #00ff88;
+    }
+
+    .hero p {
+      color: #999;
+      max-width: 650px;
+      margin: 20px auto;
+    }
+
+    .services {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 25px 100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #0d0d0d;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 30px;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #00ff88;
+    }
+
+    .icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      color: #00ff88;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #999;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 30px;
+      color: #666;
+    }
+
+    @media(max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+
+    <div class="logo">
+      TOFFY<span>LABS</span>
+    </div>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+<section class="hero">
+
+  <h1>
+    Our <span>Services</span>
+  </h1>
+
+  <p>
+    Technology solutions designed to help businesses
+    work smarter, automate faster and scale.
+  </p>
+
+</section>
+
+<section class="services">
+
+  <div class="card">
+    <div class="icon">🤖</div>
+    <h2>AI Solutions</h2>
+    <p>
+      AI assistants, chatbots and intelligent systems
+      designed around your business needs.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icon">⚙️</div>
+    <h2>Automation</h2>
+    <p>
+      Python scripts and automated workflows that
+      eliminate repetitive tasks.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icon">💻</div>
+    <h2>Web Development</h2>
+    <p>
+      Modern, responsive websites for businesses,
+      creators and personal brands.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icon">📈</div>
+    <h2>Business Solutions</h2>
+    <p>
+      Custom digital tools that improve productivity,
+      organization and business operations.
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 ToffyLabs — Build. Automate. Scale.
+</footer>
+
+</body>
+</html>
